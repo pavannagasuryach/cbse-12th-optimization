@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,outer=2cm,inner=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\begin{document}
+\centerline{\textbf{IDE ASSIGNMENT}}
+\centerline{Pavan NagaSurya Cheemalamarry}
+\centerline{pavannagasuryach18.555@gmail.com}
+\centerline{IITH - Future Wireless Communication (FWC22137)}
+\tableofcontents
+\section{problem}
+(GATE2020-QP-EE)\\
+Q.54 An 8085 microprocessor accesses two memory locations (2001H) and (2002H), that contain 8-bit numbers 98H and
+ B1H, respectively.\\
+ Thhe following program is executed:\\
+ LXI H, 2001H\\
+ MVI A, 21H\\
+ INX H\\
+ ADD M\\
+ INX H\\
+ MOV M, A\\
+ HLT\\
+ At the end of this program, the memory location 2003H contains the number in decimal (base10) from\\
+\section{components}]
+\begin{tabularx}{0.8\textwidth}{
+		| >{\centering\arraybackslash}X
+		| >{\centering\arraybackslash}X
+		| >{\centering\arraybackslash}X |}
+	\hline
+	Components & Value & Quantity\\
+	\hline
+	Breadboard & & 1\\
+	\hline
+	Arduino & uno & 1\\
+	\hline
+	Jumper Wires & & 4\\
+	\hline
+\end{tabularx}
+\subsection{Arduino}
+The Arduino Uno has some ground pins. analog input pins A0-A3 and digital pins D1-D13 that can be used for both 
+input as well as output. It also has two power pins that can generate 3.3V and 5V . In the following exercise,
+ We use digital pins, GND and 5V
+ \section{Implementation}
+ \subsection{Equation}
+	LXI, 2001H;H = 20 H, L =01 H \\
+	MVI A,21H;A = 21 H \\
+	INX H;HL + 1 $ \rightarrow $ H =20 H, L = 02 H $ \rightarrow $ HL = 2002 H \\
+	ADD M; [A] + Refeerence data of HL pair = 21 H + B1 H = D2H $ \rightarrow $ [A] \\
+	INX H;  [HL] +1 $ \rightarrow $ 002 H + 1 H $ \rightarrow $ 2002 H \\
+	MOV M,A;[A] to  memory, reference of HL pair, 2003 H [D2]  [D2] =A \\
+	HLT; Stop \\
+	Converting in decimal \\
+	210 \\
+\section{Hardware}
+\begin{enumerate}
+	\item  Connect one end of jumper wire to the ground pin on the Arduino and other end to the breadboard's 
+		ground rail.
+	\item  Connect theone terminal of jumper wire to the input pin of Arduino and other end to the positive 
+		rail on breadboard.
+	\item Connect one end of another jumper wire to the input pin of Arduino and other end to the positive 
+		rail.
+	\item Enable the power supply to breaboard from Arduino by connecting one end of jumper wire to the 
+		power pin of arduino and other end to the positive rail on breadboard.
+\end{enumerate}
+\section{Conclusion}
+  Hence, we have implemented the above problem using the code below : \\
+  \framebox{https://github.com/pavannagasuryach/cbse-12th-optimization/tree/main/codes}
+\end{document}
