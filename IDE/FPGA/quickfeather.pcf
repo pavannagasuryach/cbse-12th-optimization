@@ -1,0 +1,5 @@
+-// Note: Quickfeather uses the QFN package so the format is: set <signal name> <QFN pin #>
+set_io x		5
+set_io y		6
+set_io z		2
+set_io F		3
